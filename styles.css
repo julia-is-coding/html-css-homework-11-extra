@@ -1,0 +1,263 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+    background: grey;
+}
+
+form {
+    max-width: 600px;
+    margin: 100px auto;
+
+    border: 1px solid #c6c7cc;
+    /* border: 1px solid rgba(0,0,0,0.5); */
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 0 rgba(0,0,0,0.5);
+    font: bold 1.2rem/1.4 Helvetica, Arial, sans-serif;
+    overflow: hidden;
+
+    background: white;
+}
+
+form fieldset {
+    display: block;
+    
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    font-weight: normal;
+}
+
+form legend {
+    display: block;
+    width: 100%;
+
+    padding: .675rem 1.2rem;
+    
+}
+
+form .legend1 {
+    background: linear-gradient(#e7e6e6, #bfc1c2);
+}
+
+form .legend2 {
+    height: 3.5rem;
+    line-height: 2.4rem;
+}
+
+form .row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+form .row label {
+    flex-basis: 50%;
+    position: relative;
+}
+
+form input {
+    width: 100%;
+    height: 3rem;
+    padding: .5rem 1.2rem;
+    box-shadow: 0 0 0 1px #d6d6d6;
+    border: none;
+    outline: none;
+
+    color: inherit;
+    font-size: .9rem;
+}
+
+form input:focus {
+    box-shadow: inset 0px 0px 4px 1px rgba(255,169,41,1), 0 0 0 1px #d6d6d6;
+    color: rgba(255,169,41,1);
+}
+
+/* form .valid {
+    color: rgb(85, 233, 85);
+} */
+
+/* form .invalid {
+    color: rgb(255, 103, 103);
+} */
+
+/* form .valid .fa-times {
+    display: none;
+}
+
+form .invalid .fa-check {
+    display: none;
+} */
+
+form .fa {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+/* form .valid:after,
+form .invalid:after {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    z-index: unset;
+    display: block;
+
+    margin-top: -7px;
+
+    font-family: Font Awesome\ 5 Free;
+    font-size: 14px;
+    font-weight: 900; 
+}
+*/
+
+/* form .valid:after {
+    content: '\f00c';
+}
+
+form .invalid:after {
+    content: '\f00d';
+} */
+
+form .row select {
+    flex-basis: 100%;
+    position: relative;
+}
+
+form select {
+
+    width: 100%;
+    height: 3rem;
+    padding: .5rem 1.2rem;
+    background: white;
+    box-shadow: 0 0 0 1px #d6d6d6;
+    border: none;
+    outline: none;
+
+    appearance: none;
+
+    color: inherit;
+    font-size: .9rem;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: center;
+    align-items: center;
+
+    height: 7rem;
+}
+
+button {
+    width: 20%;
+    height: 30%;
+    background: linear-gradient(to top, rgb(32, 0, 236) , rgb(0, 149, 248));
+    /* rgb(23, 104, 255) */
+    /* box-shadow: inset 0px 0px 10px 1px rgb(41, 141, 255), 0 0 10 1px  rgb(75, 157, 250), */
+    box-shadow: 0 15px 20px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    color: white;
+    font-size: 1rem;
+}
+
+/* select2 overrides */
+.select2-container--default .select2-selection--single {
+    height: 48px;
+    border-radius: 0;
+    border: none;
+    box-shadow: 0 0 0 1px #d6d6d6;
+
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 48px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border-color: #888 transparent transparent transparent;
+    border-style: solid;
+    border-width: 7px 7px 0 7px;
+    height: 0;
+    left: -50%;
+    margin-left: -4px;
+    margin-top: -2px;
+    position: absolute;
+    top: 90%;
+    width: 0;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    color: grey;
+    font-size: .9rem;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+    display: block;
+    padding-left: 20px;
+    padding-right: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+input:focus,
+select:focus,
+button:focus,
+span:focus {
+    outline: none;
+}
+
+.select2-results__option {
+    font: normal 1.2rem/1.4 Helvetica, Arial, sans-serif;
+    font-size: .9rem;
+}
+.select2-results__option:first-child {
+    display: none;
+}
+
+.field_wrapper.error .field {
+    border: solid 1px rgb(255, 103, 103);
+    color: rgb(255, 103, 103);
+}
+.field_wrapper.success .field {
+    border: solid 1px rgb(85, 233, 85);
+    color: rgb(85, 233, 85);
+}
+.field_wrapper .fa {
+    display: none;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+.fa-check {
+    color: rgb(85, 233, 85);
+}
+.fa-times {
+    color: rgb(255, 103, 103);
+}
+.field_wrapper.success .fa.fa-check {
+    display: block;
+}
+.field_wrapper.error .fa.fa-times {
+    display: block;
+}
+
+.select2 {
+    border: solid 1px #d6d6d6 !important;
+}
+.select2.error {
+    border: solid 1px rgb(255, 103, 103) !important;
+}
+
+.select2.success {
+    border: solid 1px rgb(85, 233, 85) !important;
+}
+
+.select2-container--default .select2-selection--single {
+    box-shadow: none;
+}
